@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    Welcome
+    <br>
+    <br>
+    <br>
     <div class="relative">
       <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">

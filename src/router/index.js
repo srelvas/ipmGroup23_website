@@ -1,7 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
-import Assignments from "@/views/Assignments.vue";
+import Assignment1 from "@/views/Assignment1.vue";
+import Assignment2 from "@/views/Assignment2.vue";
+import Assignment3 from "@/views/Assignment3.vue";
 
 const routes = [
   {
@@ -15,9 +17,19 @@ const routes = [
     component: About,
   },
   {
-    path: "/assignments",
-    name: "Assignments",
-    component: Assignments,
+    path: "/assignments1",
+    name: "Assignment1",
+    component: Assignment1,
+  },
+  {
+    path: "/assignments2",
+    name: "Assignment2",
+    component: Assignment2,
+  },
+  {
+    path: "/assignments3",
+    name: "Assignment3",
+    component: Assignment3,
   }
 ];
 

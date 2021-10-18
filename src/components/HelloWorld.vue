@@ -29,10 +29,10 @@
             </PopoverButton>
 
             <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-              <PopoverPanel class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+              <PopoverPanel class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                  <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                    <router-link to="/assignments" v-for="item in solutions" :key="item.name" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                  <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                    <router-link :to="'assignments'+item.num" v-for="item in solutions" :key="item.name" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                       <div class="ml-4">
                         <p class="text-base font-medium text-gray-900">
@@ -205,15 +205,31 @@ import { ChevronDownIcon } from '@heroicons/vue/solid'
 
 const solutions = [
   {
-    name: 'Assignments',
-    description: 'Get a better understanding of where your traffic is coming from.',
+    name: 'Assignment 1',
+    description: 'Good and bad interface.',
     href: '#',
+    num: 1,
     icon: ChartBarIcon,
   },
   {
-    name: 'Projects',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    name: 'Assignment 2',
+    description: 'To be determined.',
     href: '#',
+    num: 2,
+    icon: CursorClickIcon,
+  },
+  {
+    name: 'Assignment 3',
+    description: 'To be determined.',
+    href: '#',
+    num: 3,
+    icon: CursorClickIcon,
+  },
+  {
+    name: 'Assignment 4',
+    description: 'To be determined.',
+    href: '#',
+    num: 4,
     icon: CursorClickIcon,
   }
 ]
@@ -249,6 +265,14 @@ const recentPosts = [
 ]
 
 export default {
+  /* computed: {
+    assignmentNum: function() {
+      return "/assignments"+this.item.num;
+    }
+  }, */
+  /* data:{
+    assignmentNum:"/assignments"
+  }, */
   components: {
     Popover,
     PopoverButton,
@@ -265,6 +289,6 @@ export default {
       resources,
       recentPosts,
     }
-  },
+  }
 }
 </script>

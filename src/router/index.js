@@ -8,37 +8,37 @@ import ProjectFase1 from "@/views/ProjectFase1.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/ipmGroup23_website/",
     name: "Home",
     component: Home,
   },
   {
-    path: "/about",
+    path: "/ipmGroup23_website/about",
     name: "About",
     component: About,
   },
   {
-    path: "/assignments1",
+    path: "/ipmGroup23_website/assignments1",
     name: "Assignment1",
     component: Assignment1,
   },
   {
-    path: "/assignments2",
+    path: "/ipmGroup23_website/assignments2",
     name: "Assignment2",
     component: Assignment2,
   },
   {
-    path: "/assignments3",
+    path: "/ipmGroup23_website/assignments3",
     name: "Assignment3",
     component: Assignment3,
   },
   {
-    path: "/assignments4",
+    path: "/ipmGroup23_website/assignments4",
     name: "Assignment4",
     component: Assignment3,
   },
   {
-    path: "/ProjectFase1",
+    path: "/ipmGroup23_website/ProjectFase1",
     name: "ProjectFase1",
     component: ProjectFase1,
   },

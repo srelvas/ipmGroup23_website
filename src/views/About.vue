@@ -20,18 +20,20 @@
       <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
         <div class="space-y-5 sm:space-y-4">
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Group</h2>
-          <p class="text-xl text-gray-500">Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.</p>
+          <p class="text-xl text-gray-500">Hi there. We are the group 23 of IPM class and this is our web site. Here we present our assignments and project progress.
+            We are fourth year student's on NOVA's Engenharia Informática master's degree.
+          </p>
         </div>
         <div class="lg:col-span-2">
           <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
             <li v-for="person in people" :key="person.name">
               <div class="space-y-4">
                 <div class="aspect-w-3 aspect-h-2">
-                  <img class="object-cover shadow-lg rounded-lg" :src="person.imageUrl" alt="" />
+                  <img class="object-cover shadow-lg rounded-lg" :src="require(`../assets/${person.imageName}`)" alt="" />
                 </div>
                 <div class="text-lg leading-6 font-medium space-y-1">
                   <h3>{{ person.name }}</h3>
-                  <p class="text-indigo-600">{{ person.role }}</p>
+                  <p class="text-yellow-600">{{ person.role }}</p>
                 </div>
                 <div class="text-lg">
                   <p class="text-gray-500">{{ person.bio }}</p>
@@ -72,8 +74,8 @@ const people = [
   {
     name: 'Manuel Soares',
     role: '55937',
-    imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/M%C3%A1rio_Soares_par_Claude_Truong-Ngoc_1978.png/800px-M%C3%A1rio_Soares_par_Claude_Truong-Ngoc_1978.png',
+    imageName:
+      'manuel.jpg',
     bio:
       'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
     gitHub: 'https://github.com/Manthel',
@@ -82,8 +84,8 @@ const people = [
   {
     name: 'Sara Relvas',
     role: '55596',
-    imageUrl:
-      'http://acientistaagricola.pt/wp-content/uploads/2019/07/relva_1-1.jpg',
+    imageName:
+      'sara.jpeg',
     bio:
       'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
     gitHub: 'https://github.com/srelvas',
@@ -92,8 +94,8 @@ const people = [
   {
     name: 'Pedro Coelho',
     role: '54939',
-    imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Oryctolagus_cuniculus_Tasmania_2.jpg/800px-Oryctolagus_cuniculus_Tasmania_2.jpg',
+    imageName:
+      'iconIPM.png',
     bio:
       'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
     gitHub: 'https://github.com/peter-tmc',
@@ -108,5 +110,11 @@ export default {
       people,
     }
   },
+  methods: {
+    getImgUrl(person) {
+      console.log('../assets/'+person, person)
+      return '../assets/'+person;
+    }
+  }
 }
 </script>

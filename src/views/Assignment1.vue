@@ -31,7 +31,7 @@
                 </div>
                 <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
                 <a href="#" class="flex-shrink-0 group block">
-                    <div class="flex items-center">
+                    <!-- <div class="flex items-center">
                     <div>
                         <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" />
                     </div>
@@ -43,7 +43,7 @@
                         View profile
                         </p>
                     </div>
-                    </div>
+                    </div> -->
                 </a>
                 </div>
             </div>
@@ -66,8 +66,13 @@
                 <nav class="mt-5 flex-1" aria-label="Sidebar">
                 <div class="px-2 space-y-1">
                     <button @click="changeWindow(item)" v-for="item in navigation" :key="item.name" :class="[item.current ? 'bg-gray-200 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-2 py-2 text-sm font-medium rounded-md']">
-                    <component :is="item.icon" :class="[item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-3 h-6 w-6']" aria-hidden="true" />
-                    {{ item.name }}
+                        <component :is="item.icon" :class="[item.current ? 'text-yellow-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-3 h-6 w-6']" aria-hidden="true" />
+                        {{ item.name }}
+                        <!-- <button type="button" class="mr-3 h-6 w-6" >
+                            <a href="/lec2-2122.pdf" download>
+                                <DownloadIcon/>
+                            </a>
+                        </button> -->
                     </button>
                 </div>
                 </nav>
@@ -75,16 +80,19 @@
             <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
                 <a href="#" class="flex-shrink-0 w-full group block">
                 <div class="flex items-center">
-                    <div>
-                    <img class="inline-block h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" />
+                    <div v-if="currentPerson=='Manuel'">
+                        <img class="inline-block h-9 w-9 rounded-full" src="../assets/manuel.jpg" alt="" />
+                    </div>
+                    <div v-if="currentPerson=='Sara'">
+                        <img class="inline-block h-9 w-9 rounded-full" src="../assets/sara.jpeg" alt="" />
                     </div>
                     <div class="ml-3">
-                    <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                        Whitney Francis
+                    <p class="text-sm font-medium text-yellow-700 group-hover:text-gray-900">
+                        {{currentPerson}}
                     </p>
-                    <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                    <!-- <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
                         View profile
-                    </p>
+                    </p> -->
                     </div>
                 </div>
                 </a>
@@ -112,8 +120,14 @@
             <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
                 <div class="h-full border-2 border-gray-200 border-dashed rounded-lg">
                     <span> Download here: </span>
-                    <div v-if="currentPerson=='Manuel'" class="h-full">
-                        <a href="/" download> File </a>
+                    <div v-if="currentPerson=='Manuel'" class="h-full" >
+                        <button type="button" class="mr-3 h-6 w-6" >
+                            <a href="/lec2-2122.pdf" download>
+                                <DownloadIcon/>
+                            </a>
+                        </button>
+                        <br>
+                        <br>
                         <iframe :v-if="currentPerson=='Manuel'" src="/lec2-2122.pdf" height="100%" width="100%" style="position: relative; top: 0; right: 0; bottom: 0: left: 0;"></iframe>
                     </div>
                 </div>
@@ -145,6 +159,7 @@ import {
   //UserGroupIcon,
   XIcon,
   ClipboardListIcon,
+  DownloadIcon,
 } from '@heroicons/vue/outline'
 
 const navigation = [
@@ -164,9 +179,15 @@ export default {
     TransitionRoot,
     MenuIcon,
     XIcon,
+    DownloadIcon,
   },
-  prop: {
+  /* prop: {
       currentPerson: navigation[0].name,
+  }, */
+  data: function() {
+      return{
+        currentPerson: navigation[0].name,
+      }
   },
   setup() {
     const sidebarOpen = ref(false)
@@ -183,6 +204,12 @@ export default {
           item.current=true;
           this.currentPerson= item.name;
           this.$forceUpdate();
+      },
+      mounted(){
+          console.log(this.currentPerson, " person")
+      },
+      beforeMount(){
+          console.log(this.currentPerson, " person before mount")
       }
   }
 }

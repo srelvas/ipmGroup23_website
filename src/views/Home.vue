@@ -1,10 +1,11 @@
 <template>
   <div class="home">
+    
+    <div class="relative bg-white-100">
     <br>
     <br>
     <br>
-    <div class="relative">
-      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+      <div class="absolute h-1/2 bg-gray-100"></div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
           <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div class="absolute inset-0">
@@ -13,6 +14,7 @@
                 src="../assets/dinosaurs.jpg"
                 alt="dinosaurs"
               />
+              <div class="absolute inset-0 bg-gray-400 bg-opacity-40"/>
             <div class="absolute inset-0 mix-blend-multiply"></div>
           </div>
           <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
@@ -22,16 +24,16 @@
               sm:text-5xl
               lg:text-6xl"
             >
-              <span class="block text-blue">
+              <span class="block text-yellow-500 text-opacity-90">
                 Discover the rich paleontologycal past
               </span>
-              <span class="block text-blue">that Portugal has</span>
+              <span class="block text-yellow-500 text-opacity-90">that Portugal has</span>
             </h1>
             <p class="
                 mt-6
                 max-w-lg
                 mx-auto
-                text-center text-l text-blue
+                text-center text-l text-gray-900
                 sm:max-w-3xl
               "
             >
@@ -46,7 +48,7 @@
                     "
             >
               <div>
-                <a href="#"
+                <router-link to="/ProjectFase1" href="#"
                   class="flex
                           items-center
                           justify-center
@@ -63,8 +65,9 @@
                           sm:px-8
                         "
                 >
-                  Get started
-                </a>
+                  In development - Watch our progress
+                </router-link>
+                <router-view/>
               </div>
             </div>
           </div>

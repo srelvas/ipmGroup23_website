@@ -4,6 +4,7 @@ import About from "@/views/About.vue";
 import Assignment1 from "@/views/Assignment1.vue";
 import Assignment2 from "@/views/Assignment2.vue";
 import Assignment3 from "@/views/Assignment3.vue";
+import ProjectFase1 from "@/views/ProjectFase1.vue";
 
 const routes = [
   {
@@ -30,7 +31,22 @@ const routes = [
     path: "/assignments3",
     name: "Assignment3",
     component: Assignment3,
-  }
+  },
+  {
+    path: "/assignments4",
+    name: "Assignment4",
+    component: Assignment3,
+  },
+  {
+    path: "/ProjectFase1",
+    name: "ProjectFase1",
+    component: ProjectFase1,
+  },
+  /* {
+    path: "/ProjectFase2",
+    name: "ProjectFase2",
+    component: ProjectFase2,
+  }, */
 ];
 
 const router = createRouter({

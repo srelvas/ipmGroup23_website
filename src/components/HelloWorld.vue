@@ -1,5 +1,5 @@
 <template>
-  <Popover class="relative bg-white">
+  <Popover class="relative bg-yellow-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
@@ -23,8 +23,8 @@
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-10">
           <Popover class="relative" v-slot="{ open }">
-            <PopoverButton :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500']">
-              <span>Work</span>
+            <PopoverButton :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-yello-200 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500']">
+              <span>Assignments</span>
               <ChevronDownIcon :class="[open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500']" aria-hidden="true" />
             </PopoverButton>
 
@@ -33,7 +33,42 @@
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                     <router-link :to="'assignments'+item.num" v-for="item in solutions" :key="item.name" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                      <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                      <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-yellow-500" aria-hidden="true" />
+                      <div class="ml-4">
+                        <p class="text-base font-medium text-gray-900">
+                          {{ item.name }}
+                        </p>
+                        <p class="mt-1 text-sm text-gray-500">
+                          {{ item.description }}
+                        </p>
+                      </div>
+                    </router-link>
+                  </div>
+                  <!-- <div class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                    <div v-for="item in callsToAction" :key="item.name" class="flow-root">
+                      <a :href="item.href" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                        <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                        <span class="ml-3">{{ item.name }}</span>
+                      </a>
+                    </div>
+                  </div> -->
+                </div>
+              </PopoverPanel>
+            </transition>
+          </Popover>
+
+          <Popover class="relative" v-slot="{ open }">
+            <PopoverButton :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-yellow-200 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500']">
+              <span>Projects</span>
+              <ChevronDownIcon :class="[open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500']" aria-hidden="true" />
+            </PopoverButton>
+
+            <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
+              <PopoverPanel class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
+                <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                    <router-link :to="'Project'+item.stage" v-for="item in solutionsProject" :key="item.name" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                      <component :is="item.icon" class="flex-shrink-0 h-6 w-6 text-yellow-500" aria-hidden="true" />
                       <div class="ml-4">
                         <p class="text-base font-medium text-gray-900">
                           {{ item.name }}
@@ -66,7 +101,7 @@
           </router-link>
           
           
-          <Popover class="relative" v-slot="{ open }">
+          <!-- <Popover class="relative" v-slot="{ open }">
             <PopoverButton :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500']">
               <span>More</span>
               <ChevronDownIcon :class="[open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500']" aria-hidden="true" />
@@ -108,7 +143,7 @@
                 </div>
               </PopoverPanel>
             </transition>
-          </Popover>
+          </Popover> -->
 
           
           
@@ -233,6 +268,36 @@ const solutions = [
     icon: CursorClickIcon,
   }
 ]
+const solutionsProject = [
+  {
+    name: '1ª fase',
+    description: 'Good and bad interface.',
+    href: '#',
+    stage: "Fase1",
+    icon: ChartBarIcon,
+  },
+  {
+    name: 'TBD2',
+    description: 'To be determined.',
+    href: '#',
+    stage: "Fase2",
+    icon: CursorClickIcon,
+  },
+  {
+    name: 'TBD3',
+    description: 'To be determined.',
+    href: '#',
+    stage: "Fase1",
+    icon: CursorClickIcon,
+  },
+  {
+    name: 'TBD4',
+    description: 'To be determined.',
+    href: '#',
+    stage: "Fase1",
+    icon: CursorClickIcon,
+  }
+]
 const callsToAction = [
   { name: 'Watch Demo', href: '#', icon: PlayIcon },
   { name: 'Contact Sales', href: '#', icon: PhoneIcon },
@@ -285,6 +350,7 @@ export default {
   setup() {
     return {
       solutions,
+      solutionsProject,
       callsToAction,
       resources,
       recentPosts,

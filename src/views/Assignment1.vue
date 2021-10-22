@@ -336,13 +336,13 @@ export default {
       this.currentPerson = item.name;
       this.$forceUpdate();
     },
-    mounted() {
-      console.log(this.currentPerson, " person");
-      this.changeWindow(this.currentPerson);
-    },
-    beforeMount() {
-      console.log(this.currentPerson, " person before mount");
-    },
+  },
+  mounted() {
+    let auxPerson=navigation[0];
+    this.changeWindow(auxPerson);
+  },
+  beforeMount() {
+    //console.log(this.currentPerson, " person before mount");
   },
 };
 </script>

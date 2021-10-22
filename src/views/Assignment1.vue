@@ -151,17 +151,24 @@
           <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
             <a href="#" class="flex-shrink-0 w-full group block">
               <div class="flex items-center">
-                <div v-if="currentPerson == 'Manuel'">
+                <div v-if="currentPerson == 'Manuel Soares 55937'">
                   <img
                     class="inline-block h-9 w-9 rounded-full"
                     src="../assets/manuel.jpg"
                     alt=""
                   />
                 </div>
-                <div v-if="currentPerson == 'Sara'">
+                <div v-if="currentPerson == 'Sara Relvas 55596'">
                   <img
                     class="inline-block h-9 w-9 rounded-full"
                     src="../assets/sara.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div v-if="currentPerson == 'Pedro Coelho 54939'">
+                  <img
+                    class="inline-block h-9 w-9 rounded-full"
+                    src="../assets/pedro.jpg"
                     alt=""
                   />
                 </div>
@@ -210,7 +217,15 @@
             <div
               class="h-full border-2 border-gray-200 border-dashed rounded-lg"
             >
-              <div v-if="currentPerson == 'Manuel'" class="h-full">
+              <div v-if="currentPerson == 'Manuel Soares 55937'" class="h-full">
+                <iframe
+                  src="https://www.keepandshare.com/doc11/33423/good-and-bad-design-manuel-soares-55937-pdf-225k?da=y"
+                  height="100%"
+                  width="100%"
+                  style="position: relative; top: 0; right: 0; bottom: 0: left: 0;"
+                ></iframe>
+              </div>
+              <div v-if="currentPerson == 'Pedro Coelho 54939'" class="h-full">
                 <iframe
                   src=""
                   height="100%"
@@ -218,17 +233,9 @@
                   style="position: relative; top: 0; right: 0; bottom: 0: left: 0;"
                 ></iframe>
               </div>
-              <div v-if="currentPerson == 'Sara'" class="h-full">
+              <div v-if="currentPerson == 'Sara Relvas 55596'" class="h-full">
                 <iframe
                   src="https://www.keepandshare.com/doc11/33421/good-and-bad-design-pdf-321k?da=y"
-                  height="100%"
-                  width="100%"
-                  style="position: relative; top: 0; right: 0; bottom: 0: left: 0;"
-                ></iframe>
-              </div>
-              <div v-if="currentPerson == 'Pedro'" class="h-full">
-                <iframe
-                  src=""
                   height="100%"
                   width="100%"
                   style="position: relative; top: 0; right: 0; bottom: 0: left: 0;"
@@ -272,9 +279,24 @@ import {
 } from "@heroicons/vue/outline";
 
 const navigation = [
-  { name: "Manuel", href: "#", icon: ClipboardListIcon, current: true },
-  { name: "Sara", href: "#", icon: ClipboardListIcon, current: false },
-  { name: "Pedro", href: "#", icon: ClipboardListIcon, current: false },
+  {
+    name: "Manuel Soares 55937",
+    href: "#",
+    icon: ClipboardListIcon,
+    current: true,
+  },
+  {
+    name: "Pedro Coelho 54939",
+    href: "#",
+    icon: ClipboardListIcon,
+    current: false,
+  },
+  {
+    name: "Sara Relvas 55596",
+    href: "#",
+    icon: ClipboardListIcon,
+    current: false,
+  },
   /* { name: 'Directory', href: '#', icon: SearchCircleIcon, current: false },
   { name: 'Announcements', href: '#', icon: SpeakerphoneIcon, current: false },
   { name: 'Office Map', href: '#', icon: MapIcon, current: false }, */

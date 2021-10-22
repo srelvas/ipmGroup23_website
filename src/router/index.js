@@ -8,7 +8,7 @@ import ProjectFase1 from "@/views/ProjectFase1.vue";
 
 const routes = [
   {
-    path: "/ipmGroup23_website/",
+    path: "/ipmGroup23_website",
     name: "Home",
     component: Home,
   },
@@ -38,7 +38,7 @@ const routes = [
     component: Assignment3,
   },
   {
-    path: "/ipmGroup23_website/ProjectFase1",
+    path: "/ipmGroup23_website/projectFase1",
     name: "ProjectFase1",
     component: ProjectFase1,
   },

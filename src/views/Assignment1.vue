@@ -227,7 +227,7 @@
               </div>
               <div v-if="currentPerson == 'Pedro Coelho 54939'" class="h-full">
                 <iframe
-                  src=""
+                  src="https://www.keepandshare.com/doc11/33424/good-and-bad-design-interfaces-pdf-223k?da=y"
                   height="100%"
                   width="100%"
                   style="position: relative; top: 0; right: 0; bottom: 0: left: 0;"
@@ -338,6 +338,7 @@ export default {
     },
     mounted() {
       console.log(this.currentPerson, " person");
+      this.changeWindow(this.currentPerson);
     },
     beforeMount() {
       console.log(this.currentPerson, " person before mount");

@@ -1,25 +1,11 @@
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
 <template>
   <div class="bg-white">
     <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
       <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
         <div class="space-y-5 sm:space-y-4">
-          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <h2
+            class="text-3xl text-orange font-extrabold tracking-tight sm:text-4xl"
+          >
             Our Group
           </h2>
           <p class="text-xl text-gray-500">

@@ -28,6 +28,7 @@
       <div
         class="mt-10 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center"
       >
+
         <button
           @click="productClicked(product)"
           v-for="product in productsColorScheme"
@@ -266,7 +267,7 @@ const productsColorScheme = [
   {
     id: 1,
     name: "First colour scheme",
-    href: "#",
+    /* href: "#", */
     imageSrc: "appColorScheme1_2x.png",
     imageAlt: "Soft Orange and Yellow Scheme",
     imagePalette: "palette1.png",
@@ -276,7 +277,7 @@ const productsColorScheme = [
   {
     id: 2,
     name: "Second colour scheme",
-    href: "#",
+    /* href: "#", */
     imageSrc: "appColorScheme2_2x.png",
     imageAlt: "Soft Green Scheme",
     imagePalette: "palette2.png",
@@ -286,7 +287,7 @@ const productsColorScheme = [
   {
     id: 3,
     name: "Third colour scheme",
-    href: "#",
+    /* href: "#", */
     imageSrc: "appColorScheme3_2_2x.png",
     imageAlt: "Hard Orange and Brown Scheme",
     imagePalette: "palette3.png",
@@ -296,7 +297,7 @@ const productsColorScheme = [
   {
     id: 4,
     name: "Fourth colour scheme",
-    href: "#",
+    /* href: "#", */
     imageSrc: "appColorScheme4_2x.png",
     imageAlt: "Hard Orange and Brown Scheme",
     imagePalette: "palette4.png",

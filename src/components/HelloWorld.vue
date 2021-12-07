@@ -241,7 +241,7 @@ import {
   BookmarkAltIcon,
   CalendarIcon,
   ChartBarIcon,
-  //CursorClickIcon,
+  CursorClickIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
@@ -289,17 +289,17 @@ const solutionsProject = [
     name: "App Color Scheme",
     description: "Evolution and selection of app colour scheme",
     href: "#",
-    stage: "Fase1",
+    stage: "Info",
     icon: ColorSwatchIcon,
   },
-  /*{
-    name: "TBD2",
-    description: "To be determined.",
+  {
+    name: "Stages Reports",
+    description: "User and task analysis",
     href: "#",
-    stage: "Fase2",
+    stage: "Reports",
     icon: CursorClickIcon,
   },
-  {
+  /* {
     name: "TBD3",
     description: "To be determined.",
     href: "#",
@@ -312,7 +312,7 @@ const solutionsProject = [
     href: "#",
     stage: "Fase1",
     icon: CursorClickIcon,
-  },*/
+  }, */
 ];
 const callsToAction = [
   { name: "Watch Demo", href: "#", icon: PlayIcon },

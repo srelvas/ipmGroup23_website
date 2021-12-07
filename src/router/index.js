@@ -4,7 +4,8 @@ import About from "@/views/About.vue";
 import Assignment1 from "@/views/Assignment1.vue";
 import Assignment2 from "@/views/Assignment2.vue";
 import Assignment3 from "@/views/Assignment3.vue";
-import ProjectFase1 from "@/views/ProjectFase1.vue";
+import ProjectReports from "@/views/ProjectReports.vue";
+import ProjectInfo from "@/views/ProjectInfo.vue";
 
 const routes = [
   {
@@ -38,9 +39,14 @@ const routes = [
     component: Assignment3,
   },
   {
-    path: "/ipmGroup23_website/projectFase1",
-    name: "ProjectFase1",
-    component: ProjectFase1,
+    path: "/ipmGroup23_website/projectInfo",
+    name: "projectInfo",
+    component: ProjectInfo,
+  },
+  {
+    path: "/ipmGroup23_website/projectReports",
+    name: "ProjectReports",
+    component: ProjectReports,
   },
   /* {
     path: "/ProjectFase2",

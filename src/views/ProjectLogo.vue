@@ -1,8 +1,10 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <br>
+  <div class="headerText">
   <h1 class="text-2xl font-extrabold tracking-tight text-black-500 items-center">Logo evolution</h1>
   <h2 class="text-lg font tracking-tight text-black-500 items-center">Below we show the evolution of our logo that took place in the earlier stages of development</h2>
+  </div>
   <br>
   <div class="motherBox">
   <div class="logoEvolutionBox">
@@ -146,4 +148,43 @@ export default {
   .arrowsLogo {
     padding-left:7vh;
   }
+
+  .headerText {
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .headerText:before,
+    .headerText:after {
+        background-color: rgb(106, 175, 169);
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    .headerText:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+
+    .headerText:after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+
+    .headerText {
+        padding-left:20vh;
+        padding-right:20vh;
+    }
+    
+    /* .briefContainer{
+        border-radius: 25px;
+        background: #ffe0a7;
+        padding: 20px; 
+        left: 10vh;
+        right:10vh;
+    } */
 </style>

@@ -1,17 +1,20 @@
 <template>
     <br>
-    <br>
     <div>
         <!-- <h1 class="text-2xl font tracking-tight text-black-500 items-center"> 
             
         </h1> -->
+        <br>
+        <div class="linesOfBrief">
+        <div class="briefContainer">
+        <h1 class="text-2xl font-bold tracking-tight text-black-500 items-center">
+            {{currentReportObj.brief}}
+        </h1>
+        </div>
+        </div>
         <p class="text-base font tracking-tight text-black-500 items-center">
             Below we show the project's reports of the different project stages so far.
         </p>
-        <br>
-        <h1 class="text-2xl font tracking-tight text-black-500 items-center">
-            {{currentReportObj.brief}}
-        </h1>
     </div>
     <br>
     <div class="h-screen flex overflow-hidden bg-white">
@@ -19,7 +22,7 @@
         <div class="flex flex-col w-64">
             <!-- Sidebar component, swap this element with another sidebar if you like -->
             <div
-            class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-gray-100"
+            class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-yellow-200"
             >
             <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                 <nav class="mt-5 flex-1" aria-label="Sidebar">
@@ -30,8 +33,8 @@
                     :key="report.name"
                     :class="[
                         report.current
-                        ? 'bg-gray-200 text-gray-900'
-                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                        ? 'bg-yellow-100 text-gray-900'
+                        : 'text-gray-600 hover:bg-yellow-50 hover:text-gray-900',
                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
                     ]"
                     >
@@ -173,13 +176,13 @@ export default{
         padding:0 10px; 
     } */
 
-    h1 {
+    /* .linesOfBrief {
         overflow: hidden;
         text-align: center;
     }
 
-    h1:before,
-    h1:after {
+    .linesOfBrief:before,
+    .linesOfBrief:after {
         background-color: rgb(106, 175, 169);
         content: "";
         display: inline-block;
@@ -189,14 +192,27 @@ export default{
         width: 50%;
     }
 
-    h1:before {
+    .linesOfBrief:before {
         right: 0.5em;
         margin-left: -50%;
     }
 
-    h1:after {
+    .linesOfBrief:after {
         left: 0.5em;
         margin-right: -50%;
+    } */
+
+    .linesOfBrief {
+        padding-left:60vh;
+        padding-right:60vh;
+    }
+    
+    .briefContainer{
+        border-radius: 25px;
+        background: #ffe0a7;
+        padding: 10px; 
+        left: 10vh;
+        right:10vh;
     }
     /* #q-app {
     height:100vh;

@@ -1,11 +1,17 @@
 <template>
-    <h1></h1>
     <br>
     <br>
     <div>
-        <p class="text-xl font tracking-tight text-black-500 items-center"> 
+        <!-- <h1 class="text-2xl font tracking-tight text-black-500 items-center"> 
+            
+        </h1> -->
+        <p class="text-base font tracking-tight text-black-500 items-center">
             Below we show the project's reports of the different project stages so far.
         </p>
+        <br>
+        <h1 class="text-2xl font tracking-tight text-black-500 items-center">
+            {{currentReportObj.brief}}
+        </h1>
     </div>
     <br>
     <div class="h-screen flex overflow-hidden bg-white">
@@ -80,19 +86,22 @@ const reports =[
         name:"stage 1",
         icon: ClipboardListIcon,
         current: true,
-        url: "http://www.keepandshare.com/doc11/view.php?id=33690&da=y"
+        url: "http://www.keepandshare.com/doc11/view.php?id=33690&da=y",
+        brief: "Project proposal"
     },
     {
         name:"stage 2",
         icon: ClipboardListIcon,
         current: false,
-        url: "https://www.keepandshare.com/doc11/33689/g-23-stage2-pdf-277k?da=y"
+        url: "https://www.keepandshare.com/doc11/33689/g-23-stage2-pdf-277k?da=y",
+        brief: "User and task analysis"
     },
     {
         name:"stage 3",
         icon: ClipboardListIcon,
         current: false,
-        url: "https://www.keepandshare.com/doc11/33688/g-23-stage3-pdf-1-8-meg?da=y"
+        url: "https://www.keepandshare.com/doc11/33688/g-23-stage3-pdf-1-8-meg?da=y",
+        brief: "1st Prototype"
     },
 ]
 export default{
@@ -100,6 +109,7 @@ export default{
         return {
             currentReport: reports[0].name,
             currentReportUrl: reports[0].url,
+            currentReportObj: reports[0],
         }
     },
     setup() {
@@ -115,6 +125,7 @@ export default{
       report.current = true;
       this.currentReport = report.name;
       this.currentReportUrl = report.url;
+      this.currentReportObj = report;
       this.$forceUpdate();
     },
   },
@@ -149,6 +160,44 @@ export default{
         height:100vh;
     }
 
+    /* h2 {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid #000; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+    } 
+
+    h2 span { 
+        background:#fff; 
+        padding:0 10px; 
+    } */
+
+    h1 {
+        overflow: hidden;
+        text-align: center;
+    }
+
+    h1:before,
+    h1:after {
+        background-color: rgb(106, 175, 169);
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    h1:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+
+    h1:after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
     /* #q-app {
     height:100vh;
     display:flex;

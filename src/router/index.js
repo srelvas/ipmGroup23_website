@@ -6,6 +6,7 @@ import Assignment2 from "@/views/Assignment2.vue";
 import Assignment3 from "@/views/Assignment3.vue";
 import ProjectReports from "@/views/ProjectReports.vue";
 import ProjectInfo from "@/views/ProjectInfo.vue";
+import ProjectLogo from "@/views/ProjectLogo.vue";
 
 const routes = [
   {
@@ -48,11 +49,11 @@ const routes = [
     name: "ProjectReports",
     component: ProjectReports,
   },
-  /* {
-    path: "/ProjectFase2",
-    name: "ProjectFase2",
-    component: ProjectFase2,
-  }, */
+  {
+    path: "/ipmGroup23_website/projectLogo",
+    name: "ProjectLogo",
+    component: ProjectLogo,
+  },
 ];
 
 const router = createRouter({

@@ -241,7 +241,7 @@ import {
   BookmarkAltIcon,
   CalendarIcon,
   ChartBarIcon,
-  CursorClickIcon,
+  //CursorClickIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
@@ -251,8 +251,12 @@ import {
   //ViewGridIcon,
   ColorSwatchIcon,
   XIcon,
+  DocumentReportIcon,
+  presentationChartBar,
+  ChevronDoubleRightIcon
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
+/* import { GiDinosaurBones } from 'oh-vue-icons/icons'  */
 
 const solutions = [
   {
@@ -294,19 +298,19 @@ const solutionsProject = [
   },
   {
     name: "Stages Reports",
-    description: "User and task analysis",
+    description: "Reports of the different project stages",
     href: "#",
     stage: "Reports",
-    icon: CursorClickIcon,
-  },
-  /* {
-    name: "TBD3",
-    description: "To be determined.",
-    href: "#",
-    stage: "Fase1",
-    icon: CursorClickIcon,
+    icon: DocumentReportIcon,
   },
   {
+    name: "Logo evolution",
+    description: "Evolution of our Logo",
+    href: "#",
+    stage: "Logo",
+    icon: ChevronDoubleRightIcon,
+  },
+  /* {
     name: "TBD4",
     description: "To be determined.",
     href: "#",
@@ -375,6 +379,8 @@ export default {
     MenuIcon,
     XIcon,
     ColorSwatchIcon,
+    DocumentReportIcon,
+    presentationChartBar,
   },
   setup() {
     return {

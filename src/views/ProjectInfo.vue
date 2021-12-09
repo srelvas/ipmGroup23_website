@@ -141,11 +141,14 @@
                           <p class="text-2xl text-gray-900">
                             {{ productChosen.num }}
                           </p>
+                          <p class="text-lg text-gray-500">{{productChosen.description}}</p>
                           <img
                             :src="
                               require(`../assets/${productChosen.imagePalette}`)
                             "
                           />
+                          <br>
+                          <p>{{productChosen.brief}}</p>
                         </section>
                       </div>
                     </div>
@@ -273,6 +276,7 @@ const productsColorScheme = [
     imagePalette: "palette1.png",
     num: "#1",
     description: "Soft beige and pastel yellow scheme",
+    brief: "The yellow and light beige colours invoke more earthy tones, which can easily be associated to geology studies and paleontology by association."
   },
   {
     id: 2,
@@ -283,6 +287,7 @@ const productsColorScheme = [
     imagePalette: "palette2.png",
     num: "#2",
     description: "Soft and pastel green scheme",
+    brief: "The green colours invoke nature related themes, like the biology studies."
   },
   {
     id: 3,
@@ -292,7 +297,8 @@ const productsColorScheme = [
     imageAlt: "Hard Orange and Brown Scheme",
     imagePalette: "palette3.png",
     num: "#3",
-    description: "Soft orange and brown scheme",
+    description: "Stronger orange and brown scheme",
+    brief: "A second attemtp at the first colour scheme, with stronger colours to strike more contrast."
   },
   {
     id: 4,
@@ -303,6 +309,7 @@ const productsColorScheme = [
     imagePalette: "palette4.png",
     num: "#4",
     description: "Hard orange, baby blue and salmon scheme",
+    brief: "The stronger different colours strike contrast not just on their own but amongst each other. Its very different from the previous ones but seemed to be less boring and call more attention."
   },
   // More products...
 ];

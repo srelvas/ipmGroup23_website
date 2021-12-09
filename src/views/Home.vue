@@ -50,7 +50,7 @@
             >
               <div>
                 <router-link
-                  to="/ipmGroup23_website/ProjectFase1"
+                  to="/ipmGroup23_website/ProjectLogo"
                   href="#"
                   class="flex
                           items-center

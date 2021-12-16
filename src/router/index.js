@@ -7,6 +7,8 @@ import Assignment3 from "@/views/Assignment3.vue";
 import ProjectReports from "@/views/ProjectReports.vue";
 import ProjectInfo from "@/views/ProjectInfo.vue";
 import ProjectLogo from "@/views/ProjectLogo.vue";
+import ProjectMarvel from "@/views/ProjectMarvel.vue";
+import ProjectSketches from "@/views/ProjectSketches.vue";
 
 const routes = [
   {
@@ -53,6 +55,16 @@ const routes = [
     path: "/ipmGroup23_website/projectLogo",
     name: "ProjectLogo",
     component: ProjectLogo,
+  },
+  {
+    path: "/ipmGroup23_website/ProjectMarvel",
+    name: "ProjectMarvel",
+    component: ProjectMarvel,
+  },
+  {
+    path: "/ipmGroup23_website/ProjectSketches",
+    name: "ProjectSketches",
+    component: ProjectSketches,
   },
 ];
 

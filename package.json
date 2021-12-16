@@ -14,7 +14,9 @@
     "core-js": "^3.6.5",
     "oh-vue-icons": "^1.0.0-rc1",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.12"
+    "vue-awesome": "^4.3.1",
+    "vue-router": "^4.0.12",
+    "vueperslides": "^3.3.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",

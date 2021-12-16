@@ -253,7 +253,9 @@ import {
   XIcon,
   DocumentReportIcon,
   presentationChartBar,
-  ChevronDoubleRightIcon
+  ChevronDoubleRightIcon,
+  PencilAltIcon,
+  ClipboardCheckIcon,
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
 /* import { GiDinosaurBones } from 'oh-vue-icons/icons'  */
@@ -309,6 +311,20 @@ const solutionsProject = [
     href: "#",
     stage: "Logo",
     icon: ChevronDoubleRightIcon,
+  },
+  {
+    name: "Project Marvel",
+    description: "Our project in marvel",
+    href: "#",
+    stage: "Marvel",
+    icon: ClipboardCheckIcon,
+  },
+  {
+    name: "Project Sketches",
+    description: "Our project earliest sketches",
+    href: "#",
+    stage: "Sketches",
+    icon: PencilAltIcon,
   },
   /* {
     name: "TBD4",

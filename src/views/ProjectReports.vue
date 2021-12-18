@@ -63,17 +63,27 @@
         </div>
         <div class="flex flex-col min-w-0 flex-1 overflow-hidden">
             <!-- <div class="lg:hidden"> -->
-                <div class="row-container">
-                    <div class="proj">
-                        <iframe
-                        :src="currentReportUrl"
-                        height="100%"
-                        width="100%"
-                        style="position:relative; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"
-                        ></iframe>
+                <main
+          class="flex-1 relative z-0 overflow-y-auto focus:outline-none xl:order-last"
+        >
+            <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
+                <div
+                class="h-full border-2 border-gray-200 border-dashed rounded-lg"
+                >
+                    <div class="row-container">
+                        <div class="proj">
+                            <iframe
+                            :src="currentReportUrl"
+                            height="100%"
+                            width="100%"
+                            style="position:relative; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"
+                            ></iframe>
+                        </div>
                     </div>
-                </div>
             <!-- </div> -->
+                </div>
+                </div>
+                </main>
         </div>
     </div>
                 
@@ -106,6 +116,34 @@ const reports =[
         url: "https://www.keepandshare.com/doc11/33688/g-23-stage3-pdf-1-8-meg?da=y",
         brief: "1st Prototype"
     },
+    {
+        name:"Stage 4",
+        icon: ClipboardListIcon,
+        current: false,
+        url: "https://www.keepandshare.com/doc11/33780/g-23-stage4-pdf-476k?da=y",
+        brief: "Computational prototype"
+    },
+    {
+        name:"Stage 5",
+        icon: ClipboardListIcon,
+        current: false,
+        url: "https://www.keepandshare.com/doc11/33782/g-23-stage5-pdf-847k?da=y",
+        brief: "Heuristic evaluation"
+    },
+    {
+        name:"Stage 5 - by group 22",
+        icon: ClipboardListIcon,
+        current: false,
+        url: "http://www.keepandshare.com/doc11/view.php?id=33781&da=y",
+        brief: "Heuristic evaluation - the evalution of our project by group 22"
+    },
+    {
+        name:"Stage 6",
+        icon: ClipboardListIcon,
+        current: false,
+        url: "https://www.keepandshare.com/doc11/33779/g-23-stage6-pdf-301k?da=y",
+        brief: "Evaluation results and presentation"
+    }
 ]
 export default{
     data: function(){

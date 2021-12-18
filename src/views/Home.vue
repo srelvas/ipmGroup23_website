@@ -33,12 +33,13 @@
                 mt-6
                 max-w-lg
                 mx-auto
-                text-center text-l text-gray-900
+                text-center text-xl text-gray-900 text-extrabold
                 sm:max-w-3xl
               "
             >
               With your app you will be able to learn more about Portugal
               paleontology mainly dinossaurs and fosseis tan tan tan
+              
             </p>
             <div
               class="
@@ -50,7 +51,7 @@
             >
               <div>
                 <router-link
-                  to="/ipmGroup23_website/ProjectLogo"
+                  to="/ipmGroup23_website/ProjectReports"
                   href="#"
                   class="flex
                           items-center
@@ -68,7 +69,8 @@
                           sm:px-8
                         "
                 >
-                  In development - Watch our progress
+                  Our project is finished and we have delivered a prototype.
+                  Check our reports on the process.
                 </router-link>
                 <router-view />
               </div>

@@ -134,7 +134,7 @@ const reports =[
         name:"Stage 5 - by group 22",
         icon: ClipboardListIcon,
         current: false,
-        url: "http://www.keepandshare.com/doc11/view.php?id=33781&da=y",
+        url: "https://www.keepandshare.com/doc11/33781/g-22-stage5-pdf-301k?da=y",
         brief: "Heuristic evaluation - the evalution of our project by group 22"
     },
     {
